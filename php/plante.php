@@ -1,6 +1,6 @@
 <?php
 require ("database.php");
-require ("dessin.php");
+
 class plante{
 
 	private $id;
@@ -36,21 +36,33 @@ class plante{
 		'valHum'=> $this->valHum,
 		'valLum'=> $this->valLum,
 		'date'=> date("Y-m-d H:i:s"),
-		'image'=> '../image-plante/'.$this->image
+		'image'=> 'http://192.168.2.83/Pojet_Iot_Api/image-plante/'.$this->image
 	
 	));
 
 		return $res;
 	}
 	
-	public static function select($nomArduino=''){
+	public static function select(){
 
 		$dataBase = new dataBase('iot');
 		
-		$res = $dataBase->prepareSelect("SELECT * FROM plante WHERE (nomArduino = :nomArduino)",
-	 array(
-		'nomArduino'=> $nomArduino
-	));
+		$res = $dataBase->query("SELECT DISTINCT nom, image FROM plante");
+                  
+				  
+		return $res;
+		
+	}
+	
+	public static function selectStats($nomArduino, $typeTemps){
+
+		$dataBase = new dataBase('iot');
+		
+		$res = $dataBase->prepareSelect("SELECT valHum, valLum, date FROM plante WHERE (nomArduino= :nomArduino And date >  DATE_SUB( NOW() , INTERVAL $typeTemps ) )",
+										
+		array(
+			  'nomArduino' => $nomArduino
+			  ));
                   
 				  
 		return $res;

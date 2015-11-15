@@ -30,10 +30,10 @@ class dataBase{
 
 	}	
 
-	public function query($statement, $class_name, $one = false){
+	public function query($statement, $one = false){
 
 		$req = $this->getPDO()->query($statement);
-		$req->setFetchMode(PDO::FETCH_CLASS, $class_name);
+		$req->setFetchMode(PDO::FETCH_OBJ);
 	if($one){
 
 		$data = $req->fetch();
