@@ -1,0 +1,127 @@
+body {
+margin: 0px;
+overflow-x: hidden;
+}
+
+
+
+#content_left{
+    width: 50%;
+    background-color: #fff;
+    float: left;
+    min-height: 100%;
+
+
+}
+
+.img-responsive{
+    width: 700px;
+	height: 300px;
+}
+
+.navbar{
+    margin-bottom: 0px;
+}
+
+.small-titre{
+    color: #80CB24;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#titres{ 
+   color: #d7775c; 
+}
+
+
+
+.contenu{   
+   font-family: "Times New Roman", Times, serif;
+}
+.contenu-explicatif{  
+   font-family: "Courier New", Courier, monospace;
+}
+
+#entree{ 
+    text-align: center;
+}
+
+@media (min-width: 1025px){
+.navbar-menubuilder.adapt{
+    float: right;
+    margin-right: 85px;
+}      
+    
+#content_right{
+    width: 50%;
+    background-color: #fff;
+    background-image: url(../images/image.png);
+    background-repeat:no-repeat;
+    float: right;
+    min-height: 100%;
+
+}
+}
+
+@media (min-width: 992px) and (max-width: 1024px){
+.navbar-menubuilder.adapt{
+    float: right;
+    margin-right: 85px;
+}      
+    
+#content_right{
+    width: 50%;
+    background-color: #fff;
+    background-image: url(../images/image.png);
+    background-repeat:no-repeat;
+    background-size: 500px auto;
+    float: right;
+    min-height: 100%;
+
+}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+.navbar-menubuilder.adapt{
+    float: right;
+    margin-right: 85px;
+}    
+    
+#content_right{
+    width: 50%;
+    background-color: #fff;
+    background-image: url(../images/image.png);
+    background-repeat:no-repeat;
+     background-size: 400px auto;
+    float: right;
+    min-height: 100%;
+
+}
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+#content_right{
+    width: 50%;
+    background-color: #fff;
+    background-image: url(../images/image.png);
+    background-repeat:no-repeat;
+    background-size: 350px auto;
+    float: right;
+    min-height: 100%;
+
+}
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+#content_right{
+    width: 50%;
+    background-color: #fff;
+    background-image: url(../images/image.png);
+    background-repeat:no-repeat;
+    background-size: 250px auto;
+    float: right;
+    min-height: 100%;
+
+}
+}

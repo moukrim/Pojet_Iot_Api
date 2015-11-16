@@ -36,7 +36,7 @@ class plante{
 		'valHum'=> $this->valHum,
 		'valLum'=> $this->valLum,
 		'date'=> date("Y-m-d H:i:s"),
-		'image'=> 'http://192.168.2.83/Pojet_Iot_Api/image-plante/'.$this->image
+		'image'=> 'images/image-plante/'.$this->image
 	
 	));
 
@@ -47,7 +47,7 @@ class plante{
 
 		$dataBase = new dataBase('iot');
 		
-		$res = $dataBase->query("SELECT DISTINCT nom, image FROM plante");
+		$res = $dataBase->query("SELECT DISTINCT nom, image, nomArduino FROM plante");
                   
 				  
 		return $res;
