@@ -19,6 +19,7 @@ $res = plante::selectStats($nomArduino,$typeTemps);
 		echo json_encode($retour);
 	
 }
+/*
 function getTempFocus($nom, $typeTemps, $focus){
 	
 	$focus = "'%".$focus.":00%'";
@@ -30,19 +31,14 @@ function getTempFocus($nom, $typeTemps, $focus){
 	$req->execute();
 	$row = $req->fetchall(PDO::FETCH_ASSOC);
 	echo json_encode($row);
-}
-if(!empty($_GET["typeTemps"]) && !empty($_GET["nomArduino"]) ){
-	if($_GET["typeTemps"] == "hour")
-		getTemp($_GET["nom"], "1 HOUR");
-	else if($_GET["typeTemps"] == "day")
-		getTemp($_GET["nom"], "1 DAY");
-	else if($_GET["typeTemps"] == "month" && isset($_GET["foc"])){
+}*/
+
+if(!empty($_POST["typeTemps"]) && !empty($_POST["nomArduino"]) ){
+	if($_POST["typeTemps"] == "hour")
+		getStats($_POST["nomArduino"], "6 HOUR");
+	else if($_POST["typeTemps"] == "day")
+		getStats($_POST["nomArduino"], "1 DAY");
+	/*else if($_GET["typeTemps"] == "month" && isset($_GET["foc"])){
 		getTempFocus($_GET["nom"], "30 DAY", $_GET["foc"]);
-	}
-		
+	}	*/
 }
-
-
-
-
-var_dump($res);

@@ -47,8 +47,9 @@ p.narrow{
     height: 2px;
     background: #ddd;
     position: absolute;
-    width: 80%;
+    width: 13%;
     margin: 0 auto;
+    margin-left: 120px;
     left: 0;
     right: 0;
     top: 50%;
@@ -73,8 +74,9 @@ span.round-tabs{
     z-index: 2;
     position: absolute;
     left: 0;
+    padding-top: 12px;
     text-align: center;
-    font-size: 25px;
+    font-size: 40px;
 }
 
 span.round-tabs.one{

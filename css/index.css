@@ -55,12 +55,13 @@ overflow-x: hidden;
     background-color: #fff;
     float: right;
     min-height: 100%;
+    margin-top: -50px;
 
 }
 
 #div_left{
     width: 25%;
-    background-color: #39ACCD;
+    background-image: url(../images/image_css/geometry2.png);
     float: left;
     min-height: 100%;
 

@@ -36,7 +36,7 @@ class plante{
 		'valHum'=> $this->valHum,
 		'valLum'=> $this->valLum,
 		'date'=> date("Y-m-d H:i:s"),
-		'image'=> 'images/image-plante/'.$this->image
+		'image'=> '../images/image_plante/'.$this->image.'.jpg'
 	
 	));
 

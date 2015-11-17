@@ -18,7 +18,7 @@
 					<ul class="nav navbar-nav navbar-left">
 						<li><a href="#"><p id="titres">Accueil</p></a>
 						</li>
-						<li><a href="front/myGarden.php"><p id="titres">My Garden</p></a>
+						<li><a href="front/stats.php"><p id="titres">My Garden</p></a>
 						</li>
 						<li><a href="/about-us"><p id="titres">About Us</p></a>
 						</li>

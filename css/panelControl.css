@@ -17,8 +17,12 @@ select {
 #circle {
       margin-left: auto;
 	  margin-right: auto;
-      background: yellow;
+      background-image: url(../images/init.jpg);
+      background-repeat: no-repeat;
+      background-size: 100px 100px;
       border-radius: 50%;
+      -webkit-border-radius: 50%;
+	  -moz-border-radius: 50%;
       width: 100px;
       height: 100px;
 }
