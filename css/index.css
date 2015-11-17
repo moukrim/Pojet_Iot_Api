@@ -32,7 +32,12 @@ overflow-x: hidden;
    color: #d7775c; 
 }
 
-
+#logo{
+    width:180px;
+    height: auto;
+    margin-top: -30px;
+    margin-left: -50px;
+}
 
 .contenu{   
    font-family: "Times New Roman", Times, serif;
@@ -43,6 +48,22 @@ overflow-x: hidden;
 
 #entree{ 
     text-align: center;
+}
+
+#div_right{
+    width: 75%;
+    background-color: #fff;
+    float: right;
+    min-height: 100%;
+
+}
+
+#div_left{
+    width: 25%;
+    background-color: #39ACCD;
+    float: left;
+    min-height: 100%;
+
 }
 
 @media (min-width: 1025px){

@@ -2,7 +2,6 @@ $(function(){
 /*
 setInterval(socket_time, 1000);
 */
- 
 var chart;
 var data = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
@@ -31,11 +30,16 @@ var data = {
 };
 
 
-
+        $("#home").empty();
+        $("#profile").empty();
+        $("#messages").empty();
+        $("#settings").empty();
+        $("#doner").empty();
 $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
      e.target; // newly activated tab
      
     if ($(this).attr("href") == "#messages") {
+        $("#messages").append('<canvas id="myChart" width="880" height="300"></canvas>');
         var ctx = $("#myChart").get(0).getContext("2d");
         new Chart(ctx).Line(data);
         $("#home").empty();

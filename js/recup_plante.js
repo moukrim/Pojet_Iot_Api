@@ -5,11 +5,15 @@ $(function(){
         resultats = $.parseJSON(data);
         $.each(resultats, function (ind, val) {
             $(".liste_plante").append('\
+                <h1 class="page-header"></h1>\
                 <div class="row">\
 				<div class="col-md-7">\
-					<a href="#">\
-						<img class="img-responsive" src="'+val.image+'" alt="">\
-					</a>\
+                    <form action="../front/stats.php" method="post" >\
+                        <input type="hidden" name="'+val.nomArduino+'"/>\
+                        <a href="#" onclick="document.forms[0].submit();">\
+                            <img class="img-responsive" src="'+val.image+'" alt="">\
+                        </a>\
+                    </form>\
 				</div>\
 				<div class="col-md-5">\
 					<h3>'+val.nom+'</h3>\
@@ -19,10 +23,12 @@ $(function(){
 				</div>\
 			</div>\
                 ');
-
+                
         });
         console.log(resultats);
 
     });
+    
+    
     
 });

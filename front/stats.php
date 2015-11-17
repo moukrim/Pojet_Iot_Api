@@ -1,46 +1,79 @@
 <html>
 <head>
 	<title>Test</title>
-	
+	<meta charset="utf-8" />
 	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	<link rel="stylesheet" href="../css/index.css"/>
-	<link rel="stylesheet" href="../css/menu.css"/>
 	<link rel="stylesheet" href="../css/tabs.css"/>
+	<link rel="stylesheet" href="../css/panelControl.css"/>
 </head>
-
+  <style>
+   
+  </style>
 <body>
-<div id="content_left">
-   <div id="menu">
-	<div class="row">
-	  <div class="col-sm-12">
-		<div class="sidebar-nav">
-		  <div class="navbar navbar-default" role="navigation">
-			<div class="navbar-header">
-			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			  </button>
-			  <span class="visible-xs navbar-brand">Sidebar menu</span>
+	<div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header"><a class="navbar-brand" href="#"><p id="titre-global">Smart Garden</p></a>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse navbar-menubuilder adapt">
+					<ul class="nav navbar-nav navbar-left">
+						<li><a href="../index.php"><p id="titres">Accueil</p></a>
+						</li>
+						<li><a href="#" active><p id="titres">My Garden</p></a>
+						</li>
+						<li><a href="/about-us"><p id="titres">About Us</p></a>
+						</li>
+						<li><a href="/contact"><p id="titres">Contact Us</p></a>
+						</li>
+					</ul>
+				</div>
 			</div>
-			<div class="navbar-collapse collapse sidebar-navbar-collapse">
-			  <ul class="nav navbar-nav">
-				<li class="active"><a href="#">Menu Item 1</a></li>
-				<li><a href="#">My Garden</a></li>
-				<li><a href="#">Menu Item 4</a></li>
-				<li><a href="#">Reviews <span class="badge">1,118</span></a></li>
-			  </ul>
-			</div><!--/.nav-collapse -->
-		  </div>
-		</div>
-	  </div>
 	</div>
-   </div>
+<div id="div_left">
+    <div class="panel panel-success">
+		<div class="panel-heading">
+			<h3 class="panel-title" style="text-align:center;">Panneau de contrôle</h3>
+		</div>
+		<div class="panel-body">
+			<div class="form-group">
+				<label for="sel1">Select list:</label>
+						<form action="#">
+ 
+							<div id="circle"></div>
+						   
+							<fieldset>
+							  <label for="radius">Circle radius</label>
+							  <select name="radius" id="radius">
+								<option value="50">50px</option>
+								<option value="100">100px</option>
+								<option value="150" selected="selected">150px</option>
+								<option value="200">200px</option>
+								<option value="250">250px</option>
+							  </select>
+						   
+							  <label for="color">Circle color</label>
+							  <select name="color" id="color">
+								<option value="black">Black</option>
+								<option value="red">Red</option>
+								<option value="yellow" selected="selected">Yellow</option>
+								<option value="blue">Blue</option>
+								<option value="green">Green</option>
+							  </select>
+							</fieldset>
+						   
+						</form>
+			</div>
+		</div>
+	</div>
 </div>
 
 
-<div id="content_right">
+<div id="div_right">
 		<section>	
 			<div class="board">
 						<!-- <h2>Welcome to IGHALO!<sup>™</sup></h2>-->
@@ -104,7 +137,7 @@
 							  
 						  </div>
 						  <div class="tab-pane fade" id="messages">
-							<canvas id="myChart" width="880" height="300"></canvas>
+							
 						  </div>
 						  <div class="tab-pane fade" id="settings">
 							  <h3 class="head text-center">Drop comments!</h3>
@@ -134,10 +167,10 @@
                    
 </div>
 
-<script type="text/javascript" src="../lib/jquery/jquery.js"></script>
 <script type="text/javascript" src="../lib/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../lib/chart/Chart.min.js"></script>
+<script type="text/javascript" src="../lib/jquery-ui/jquery-ui.min.js"></script>
 <script type="text/javascript" src="../js/index.js"></script>
-
+<script type="text/javascript" src="../js/panelControl.js"></script>
 </body>
 </html>

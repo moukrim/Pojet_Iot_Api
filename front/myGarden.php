@@ -3,7 +3,6 @@
 	<title>Test</title>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="../css/menu.css"/>
 	<link rel="stylesheet" href="../css/index.css"/>
     <link rel="stylesheet" href="../css/myGarden.css"/>
 
@@ -33,29 +32,24 @@
 	
 
 
-
+	<div id="bloc_liste">
 		<div id="fond"> 
-        <div class="ruban">     
-            <h2>Mes plantes !</h2>     
-        </div>     
-        <div class="ruban_gauche"></div>
-        <div class="ruban_droit"></div>
-    </div>
-       <h1 class="page-header"></h1>
+			<div class="ruban">     
+				 <h2>Mes plantes !</h2>     
+			</div>     
+			<div class="ruban_gauche"></div>
+			<div class="ruban_droit"></div>
+		</div>
+       
 
-        <!-- /.row -->
-
-        <!-- Project One -->
 		<div class="liste_plante">
-			
-        <!-- /.row -->
+
 		</div>
         <hr>
-
-        <!-- Project Two -->
-     
-        <!-- /.row -->
-
+	</div>
+	<div id="bloc_controle">
+		
+	</div>
 
 <script type="text/javascript" src="../lib/jquery/jquery.js"></script>
 <script type="text/javascript" src="../lib/bootstrap/js/bootstrap.min.js"></script>

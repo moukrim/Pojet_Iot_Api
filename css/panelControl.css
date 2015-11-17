@@ -1,0 +1,24 @@
+ fieldset {
+      border: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 200px;
+     /* margin-left: 300px;*/
+}
+label {
+      display: block;
+      text-align: center;
+      
+}
+select {
+      width: 200px;
+}
+ 
+#circle {
+      margin-left: auto;
+	  margin-right: auto;
+      background: yellow;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+}

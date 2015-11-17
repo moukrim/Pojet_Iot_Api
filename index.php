@@ -3,15 +3,14 @@
 	<title>Test</title>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="css/menu.css"/>
 	<link rel="stylesheet" href="css/index.css"/>
 
 </head>
 
 <body>
-		<div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
+		<div id="custom-bootstrap-menu" class="navbar navbar-default fixNavigation" role="navigation">
 			<div class="container-fluid">
-				<div class="navbar-header"><a class="navbar-brand" href="#"><p id="titre-global">Smart Garden</p></a>
+				<div class="navbar-header"><a class="navbar-brand" href="#"><p id="titre-global"><img id="logo" src="images/logo.png"></p></a>
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 					</button>
 				</div>
@@ -44,29 +43,8 @@
 	</div>	
 </div>
 
-<!--
-		<div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Page Heading
-                    <small>Secondary Text</small>
-                </h1>
-            </div>
-        </div>
-        <!-- /.row -->
 
-        <!-- Project One 
-		<div class="liste_plante">
-			
-        <!-- /.row 
-		</div>
-        <hr>
-
-        <!-- Project Two -->
-     
-        <!-- /.row -->
-<div id="content_right">
-		
-</div>
+<div id="content_right"></div>
 
 <script type="text/javascript" src="lib/jquery/jquery.js"></script>
 <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
