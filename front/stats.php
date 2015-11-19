@@ -2,14 +2,15 @@
 <head>
 	<title>Test</title>
 	<meta charset="utf-8" />
+	<meta content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1" name="viewport">
 	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	<link rel="stylesheet" href="../lib/weather_icons/css/weather-icons.min.css"/>
 	<link rel="stylesheet" href="../css/index.css"/>
-	<link rel="stylesheet" href="../css/tabs.css"/>
 	<link rel="stylesheet" href="../css/panelControl.css"/>
+	<link rel="stylesheet" href="../css/tabs.css"/>
 </head>
   <style>
    
@@ -52,6 +53,7 @@
 							  <select name="temp" id="temp">
 								<option value="hour">6H</option>
 								<option value="day">1DAY</option>
+								<option value="week">1WEEK</option>
 							  </select>
 						   
 							  <label for="liste_plantes"></label>

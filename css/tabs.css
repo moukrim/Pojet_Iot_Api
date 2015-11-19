@@ -21,14 +21,15 @@
 margin: 60px;
 height: 500px;
 background: #fff;
-/*box-shadow: 10px 10px #ccc,-10px 20px #ddd;*/
+box-shadow: 10px 10px #ccc,-10px 20px #ddd;
 }
 .board .nav-tabs {
     position: relative;
-    /* border-bottom: 0; */
-    /* width: 80%; */
+    border-bottom: 0; 
+    width: 80%; 
     margin: 40px auto;
     margin-bottom: 0;
+    margin-left: 35%;
     box-sizing: border-box;
 
 }
@@ -47,9 +48,9 @@ p.narrow{
     height: 2px;
     background: #ddd;
     position: absolute;
-    width: 13%;
+    width: 20%;
     margin: 0 auto;
-    margin-left: 120px;
+    margin-left: 55px;
     left: 0;
     right: 0;
     top: 50%;

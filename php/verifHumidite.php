@@ -1,0 +1,3 @@
+<?php
+
+$res = plante::verifHumidite();

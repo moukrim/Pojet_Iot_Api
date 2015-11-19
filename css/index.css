@@ -1,16 +1,7 @@
-body {
+html, body {
 margin: 0px;
+height: 100%;
 overflow-x: hidden;
-}
-
-
-
-#content_left{
-    width: 50%;
-    background-color: #fff;
-    float: left;
-    min-height: 100%;
-
 
 }
 
@@ -50,21 +41,11 @@ overflow-x: hidden;
     text-align: center;
 }
 
-#div_right{
-    width: 75%;
+#content_left{
+    width: 50%;
     background-color: #fff;
-    float: right;
-    min-height: 100%;
-    margin-top: -50px;
-
-}
-
-#div_left{
-    width: 25%;
-    background-image: url(../images/image_css/geometry2.png);
     float: left;
     min-height: 100%;
-
 }
 
 @media (min-width: 1025px){
@@ -85,65 +66,84 @@ overflow-x: hidden;
 }
 
 @media (min-width: 992px) and (max-width: 1024px){
-.navbar-menubuilder.adapt{
-    float: right;
-    margin-right: 85px;
-}      
+    .navbar-menubuilder.adapt{
+        float: right;
+        margin-right: 85px;
+    }      
+        
+    #content_right{
+        width: 50%;
+        background-color: #fff;
+        background-image: url(../images/image.png);
+        background-repeat:no-repeat;
+        background-size: 500px auto;
+        float: right;
+        min-height: 100%;
     
-#content_right{
-    width: 50%;
-    background-color: #fff;
-    background-image: url(../images/image.png);
-    background-repeat:no-repeat;
-    background-size: 500px auto;
-    float: right;
-    min-height: 100%;
-
-}
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-.navbar-menubuilder.adapt{
-    float: right;
-    margin-right: 85px;
-}    
+
+    .ui-selectmenu-button {
+          width: 170px !important;
+         
+          
+    }
+    .navbar-menubuilder.adapt{
+        float: right;
+        margin-right: 85px;
+    }    
+        
+    #content_right{
+        width: 50%;
+        background-color: #fff;
+        background-image: url(../images/image.png);
+        background-repeat:no-repeat;
+         background-size: 400px auto;
+        float: right;
+        min-height: 100%;
     
-#content_right{
-    width: 50%;
-    background-color: #fff;
-    background-image: url(../images/image.png);
-    background-repeat:no-repeat;
-     background-size: 400px auto;
-    float: right;
-    min-height: 100%;
-
+    }
 }
+@media (max-width: 767px){   
+        
+    #content_right{
+        width: 50%;
+        background-color: #fff;
+        background-image: url(../images/image.png);
+        background-repeat:no-repeat;
+        background-size: 350px auto;
+        float: right;
+        min-height: 100%;
+    
+    }
+    
 }
-
 /* Landscape phones and portrait tablets */
-@media (max-width: 767px) {
-#content_right{
-    width: 50%;
-    background-color: #fff;
-    background-image: url(../images/image.png);
-    background-repeat:no-repeat;
-    background-size: 350px auto;
-    float: right;
-    min-height: 100%;
-
-}
+@media (max-width: 767px) {     
+    #content_right{
+        width: 50%;
+        background-color: #fff;
+        background-image: url(../images/image.png);
+        background-repeat:no-repeat;
+        background-size: 300px auto;
+        float: right;
+        min-height: 100%;
+    
+    }
 }
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
-#content_right{
-    width: 50%;
-    background-color: #fff;
-    background-image: url(../images/image.png);
-    background-repeat:no-repeat;
-    background-size: 250px auto;
-    float: right;
-    min-height: 100%;
-
-}
+    #content_right{
+        width: 50%;
+        background-color: #fff;
+        background-image: url(../images/image.png);
+        background-repeat:no-repeat;
+        background-size: 210px auto;
+        float: right;
+        min-height: 100%;
+    
+    }
 }

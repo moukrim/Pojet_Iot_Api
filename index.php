@@ -2,6 +2,7 @@
 <head>
 	<title>Test</title>
 	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="css/index.css"/>
 

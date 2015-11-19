@@ -1,4 +1,20 @@
- fieldset {
+#div_right{
+    width: 75%;
+    background-color: #fff;
+    float: right;
+    min-height: 100%;
+    margin-top: -50px;
+
+}
+
+#div_left{
+    width: 25%;
+    background-image: url(../images/image_css/geometry2.png);
+    float: left;
+    min-height: 100%;
+
+}
+fieldset {
       border: 0;
       margin-left: auto;
       margin-right: auto;
@@ -25,4 +41,196 @@ select {
 	  -moz-border-radius: 50%;
       width: 100px;
       height: 100px;
+}
+@media (min-width: 1350px){
+    #myChart{
+        width: 880px !important;
+        height: auto !important;
+    }
+    #myChartLumiere{
+        width: 880px !important;
+        height: auto !important;
+    } 
+    
+}
+@media (min-width: 1180px) and (max-width: 1349px){
+    
+    #myChart{
+        width: 750px !important;
+        height: auto !important;
+    }
+    #myChartLumiere{
+        width: 750px !important;
+        height: auto !important;
+    }
+}
+@media (min-width: 1043px) and (max-width: 1179px){
+    
+    #myChart{
+        width: 650px !important;
+        height: auto !important;
+    }
+    #myChartLumiere{
+        width: 650px !important;
+        height: auto !important;
+    }
+}
+
+@media (min-width: 909px) and (max-width: 1042px){
+    
+    #myChart{
+        width: 550px !important;
+        height: auto !important;
+    }
+    #myChartLumiere{
+        width: 550px !important;
+        height: auto !important;
+    }
+}
+
+@media (min-width: 815px) and (max-width: 908px){
+    
+    #myChart{
+        width: 480px !important;
+        height: auto !important;
+    }
+    #myChartLumiere{
+        width: 480px !important;
+        height: auto !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 814px){
+    
+    #myChart{
+        width: 400px !important;
+        height: auto !important;
+    }
+    #myChartLumiere{
+        width: 400px !important;
+        height: auto !important;
+    }
+}
+@media (max-width: 767px){
+  #myChart{
+        margin-left: 10px;
+        width: 300px !important;
+        height: 250px !important;
+    }
+    #myChartLumiere{
+        margin-left: 10px;
+        width: 300px !important;
+        height: 250px !important;
+    }
+}    
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .ui-selectmenu-button {
+          width: 170px !important;     
+    }    
+}
+
+@media (max-width: 767px) and (min-height: 460px)  and (max-height: 547px){
+     section{
+        margin-left: -70px;
+        margin-right: -70px;
+    }
+    #div_right{
+        width: 100%;
+        background-color: #fff;
+        margin-top: 20px !important;
+        float: right;
+        height: 50%;
+ 
+    
+    }
+    
+    #div_left{
+        width: 100%;
+        background-image: url(../images/image_css/geometry2.png);
+        float: left;
+        height: 50%;
+    
+    }
+    
+}
+
+@media (max-width: 767px) and (min-height: 548px)  and (max-height: 600px){
+    
+     section{
+        margin-left: -70px;
+        margin-right: -70px;
+    }
+    #div_right{
+        width: 100%;
+        background-color: #fff;
+        float: right;
+        height: 50%;
+ 
+    
+    }
+    
+    #div_left{
+        width: 100%;
+        margin-bottom: -250px !important;
+        background-image: url(../images/image_css/geometry2.png);
+        float: left;
+        height: 50%;
+    
+    }
+    
+}
+
+
+@media (max-width: 767px) and (min-height: 601px)  and (max-height: 740px){
+    
+    section{
+        margin-left: -70px;
+        margin-right: -70px;
+    }
+    #div_right{
+        width: 100%;
+        background-color: #fff;
+        float: right;
+        height: 50%;
+ 
+    
+    }
+    
+    #div_left{
+        width: 100%;
+        margin-bottom: -320px !important;
+        background-image: url(../images/image_css/geometry2.png);
+        float: left;
+        height: 50%;
+    
+    }
+    
+    
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    section{
+        margin-left: -70px;
+        margin-right: -70px;
+    }
+    #div_right{
+        width: 100%;
+        background-color: #fff;
+        float: right;
+        height: 50%;
+
+    
+    }
+    
+    #div_left{
+        width: 100%;
+        margin-bottom: -250px;
+        background-image: url(../images/image_css/geometry2.png);
+        float: left;
+        height: 50%;
+    
+    }
 }

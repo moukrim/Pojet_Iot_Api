@@ -69,7 +69,22 @@ class plante{
 		
 	}
 
-
+	public static function verifHumidite(){
+		
+		$dataBase = new dataBase('iot');
+		
+		$res = $dataBase->prepareSelect("SELECT valHum, valLum, date FROM plante WHERE (nomArduino= :nomArduino And date >  DATE_SUB( NOW() , INTERVAL $typeTemps ) )",
+										
+		array(
+			  'nomArduino' => $nomArduino
+			  ));
+                  
+				  
+		return $res;
+		
+		
+	}
+	
 	public function getId(){
 		return $this->id;
 	}
