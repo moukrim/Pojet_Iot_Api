@@ -1,8 +1,34 @@
   $(function() {
-     var chart;
-    
-    
+    var chart;
     var circle = $( "#circle" );
+    
+     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+     e.target; // newly activated tab  
+     if ($(this).attr("href") == "#verifHumidite") {
+        $.get("../php/verifHumidite.php", function (data) {
+            array= $.parseJSON(data);
+            if (array.length > 0) {
+               
+                $.each(array, function (ind, value) {
+                  $("#verifHumidite").empty().append('<div class="alert alert-danger" role="alert">\
+                                                <p>La plante '+value.nom+' sur l\'arduino '+value.nomArduino+' a besoin d\'eau!!!</p>\
+                                             </div>\
+                                             ');
+              });
+                console.log(data);
+            }else{
+               $("#verifHumidite").empty().append('<div class="alert alert-success" role="alert">\
+                                                <p>Toutes les plantes ont suffisement d\'eau!!!</p>\
+                                             </div>\
+                                             ');
+               console.log("empty");
+            }
+        });
+        
+        $("#lumiere").empty();
+        $("#humidite").empty();
+    }
+});
  
     $( "#temp" ).selectmenu({
       change: function( event, data ) {
@@ -46,6 +72,7 @@ function getStats(){
              navLumiere(dataLumiere); 
              navHumidity(dataHumidite);
              $('a[data-toggle="tab"]').trigger('click');
+  
           });
    }
       
@@ -54,10 +81,13 @@ function navHumidity(dataHumidite){
   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
      e.target; // newly activated tab  
      if ($(this).attr("href") == "#humidite") {
+        $("#lumiere").empty();
+        $("#verifHumidite").empty();  
         $("#humidite").empty().append('<canvas id="myChart" width="880" height="300"></canvas>');
         var ctx = $("#myChart").get(0).getContext("2d");
         new Chart(ctx).Line(dataHumidite);
-        $("#lumiere").empty();
+        //$("#lumiere").empty();
+        //$("#verifHumidite").empty();
 
     }
  
@@ -71,10 +101,13 @@ function navLumiere(dataLumiere){
   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
      e.target; // newly activated tab  
      if ($(this).attr("href") == "#lumiere") {
+        $("#humidite").empty();
+        $("#verifHumidite").empty();
         $("#lumiere").empty().append('<canvas id="myChartLumiere" width="880" height="300"></canvas>');
         var ctx = $("#myChartLumiere").get(0).getContext("2d");
         new Chart(ctx).Line(dataLumiere);
-        $("#humidite").empty();
+        //$("#humidite").empty();
+      //  $("#verifHumidite").empty();
 
     }
  
@@ -120,10 +153,6 @@ function graphLumiere() {
       };
       return data;
 }
-
-$("#humidite").empty();
-$("#lumiere").empty();
-
 
 
 

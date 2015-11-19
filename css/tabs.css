@@ -29,7 +29,7 @@ box-shadow: 10px 10px #ccc,-10px 20px #ddd;
     width: 80%; 
     margin: 40px auto;
     margin-bottom: 0;
-    margin-left: 35%;
+    margin-left: 25%;
     box-sizing: border-box;
 
 }
@@ -48,7 +48,7 @@ p.narrow{
     height: 2px;
     background: #ddd;
     position: absolute;
-    width: 20%;
+    width: 40%;
     margin: 0 auto;
     margin-left: 55px;
     left: 0;

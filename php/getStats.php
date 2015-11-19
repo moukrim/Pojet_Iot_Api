@@ -10,13 +10,13 @@ $res = plante::selectStats($nomArduino,$typeTemps);
     if ($typeTemps == "1 DAY"){
 		for ($i=0; $i < $c ; $i++) { 
 		if(($i % 3) == 0)
-			array_push($retour, $res[$i]);
+			array_push($retourDay, $res[$i]);
 			
 		}
 	}elseif($typeTemps == "7 DAY"){
 		for ($i=0; $i < $c ; $i++) { 
 		if(($i % 32) == 0)
-			array_push($retour, $res[$i]);
+			array_push($retourWeek, $res[$i]);
 			
 		}
 			

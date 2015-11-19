@@ -12,10 +12,5 @@ $(function(){
 
     });
     
-  /*  $("#liste_plantes").on('change', function() {
-        var val = $(this).val();
-        console.log(val);
-    });
-    */
     
 });

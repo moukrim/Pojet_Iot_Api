@@ -73,13 +73,8 @@ class plante{
 		
 		$dataBase = new dataBase('iot');
 		
-		$res = $dataBase->prepareSelect("SELECT valHum, valLum, date FROM plante WHERE (nomArduino= :nomArduino And date >  DATE_SUB( NOW() , INTERVAL $typeTemps ) )",
-										
-		array(
-			  'nomArduino' => $nomArduino
-			  ));
-                  
-				  
+		$res = $dataBase->query("SELECT DISTINCT nom, nomArduino FROM plante WHERE (date >  DATE_SUB( NOW() , INTERVAL 1 MINUTE ) And valHum< 200 )");
+										       			  
 		return $res;
 		
 		
