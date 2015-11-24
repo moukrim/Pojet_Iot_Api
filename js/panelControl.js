@@ -2,36 +2,10 @@
     var chart;
     var circle = $( "#circle" );
     
-     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-     e.target; // newly activated tab  
-     if ($(this).attr("href") == "#verifHumidite") {
-        $.get("../php/verifHumidite.php", function (data) {
-            array= $.parseJSON(data);
-            if (array.length > 0) {
-               
-                $.each(array, function (ind, value) {
-                  $("#verifHumidite").empty().append('<div class="alert alert-danger" role="alert">\
-                                                <p>La plante '+value.nom+' sur l\'arduino '+value.nomArduino+' a besoin d\'eau!!!</p>\
-                                             </div>\
-                                             ');
-              });
-                console.log(data);
-            }else{
-               $("#verifHumidite").empty().append('<div class="alert alert-success" role="alert">\
-                                                <p>Toutes les plantes ont suffisement d\'eau!!!</p>\
-                                             </div>\
-                                             ');
-               console.log("empty");
-            }
-        });
-        
-        $("#lumiere").empty();
-        $("#humidite").empty();
-    }
-});
- 
+  
     $( "#temp" ).selectmenu({
       change: function( event, data ) {
+             $("#verifHumidite").hide();
          nomArduino=$('#liste_plantes option:selected').text();
          typeTemps=$('#temp option:selected').val();
          getStats();
@@ -39,7 +13,8 @@
      });
 
     $( "#liste_plantes" ).selectmenu({
-       change: function( event, data ) { 
+       change: function( event, data ) {
+         $("#verifHumidite").hide();
          circle.css( "background-image", 'url("' + data.item.value + '")');
          nomArduino=$('#liste_plantes option:selected').text();
          typeTemps=$('#temp option:selected').val();
@@ -69,52 +44,41 @@ function getStats(){
             $.each(reponse, function (ind, val) {
               remplirGraph(dataHumidite, dataLumiere, val);
               });
-             navLumiere(dataLumiere); 
-             navHumidity(dataHumidite);
+             nav(dataLumiere,dataHumidite); 
+           //  navHumidity(dataHumidite);
              $('a[data-toggle="tab"]').trigger('click');
   
           });
    }
-      
-function navHumidity(dataHumidite){
+
+ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+     $("#verifHumidite").hide();
+  });
+function nav(dataLumiere,dataHumidite){
   
   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-     e.target; // newly activated tab  
-     if ($(this).attr("href") == "#humidite") {
-        $("#lumiere").empty();
-        $("#verifHumidite").empty();  
-        $("#humidite").empty().append('<canvas id="myChart" width="880" height="300"></canvas>');
-        var ctx = $("#myChart").get(0).getContext("2d");
-        new Chart(ctx).Line(dataHumidite);
-        //$("#lumiere").empty();
-        //$("#verifHumidite").empty();
-
-    }
- 
- 
-});
-   
-}
-
-function navLumiere(dataLumiere){
-  
-  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+     $("#verifHumidite").hide();
      e.target; // newly activated tab  
      if ($(this).attr("href") == "#lumiere") {
-        $("#humidite").empty();
-        $("#verifHumidite").empty();
+        console.log("lumiere");
         $("#lumiere").empty().append('<canvas id="myChartLumiere" width="880" height="300"></canvas>');
         var ctx = $("#myChartLumiere").get(0).getContext("2d");
         new Chart(ctx).Line(dataLumiere);
-        //$("#humidite").empty();
-      //  $("#verifHumidite").empty();
-
+        $("#humidite").empty();
+  
+    }else if ($(this).attr("href") == "#humidite") {
+          console.log("humidite");
+        $("#humidite").empty().append('<canvas id="myChart" width="880" height="300"></canvas>');
+        var ctx = $("#myChart").get(0).getContext("2d");
+        new Chart(ctx).Line(dataHumidite);
+        $("#lumiere").empty();
     }
  
  
 });
    
 }
+
 
 function graphHumidite() {
        var data = {
@@ -154,6 +118,35 @@ function graphLumiere() {
       return data;
 }
 
+  $("#button1").click(function(){
+      $("li").removeClass("active");
+      $("#verifHumidite").show();
+     $.get("../php/verifHumidite.php", function (data) {
+            array= $.parseJSON(data);
+            if (array.length > 0) {
+               
+                $.each(array, function (ind, value) {
+                  $("#verifHumidite").empty().append('<div class="alert alert-danger" role="alert">\
+                                                <p>La plante '+value.nom+' sur l\'arduino '+value.nomArduino+' a besoin d\'eau!!!</p>\
+                                             </div>\
+                                             ');
+              });
+                console.log(data);
+            }else{
+             
+               $("#verifHumidite").empty().append('<div class="alert alert-success" role="alert">\
+                                                <p>Toutes les plantes ont suffisement d\'eau!!!</p>\
+                                             </div>\
+                                             ');
+               console.log("empty");
+            }
+            
+        });
+     
+     $("#lumiere").empty();
+     $("#humidite").empty();
+  });
 
+ 
 
   });

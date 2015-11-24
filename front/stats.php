@@ -77,13 +77,7 @@
 						<ul class="nav nav-tabs" id="myTab">
 						<div class="liner"></div>
 						
-						<li><a href="#verifHumidite" data-toggle="tab" title="Verification Humidité">
-						 <span class="round-tabs four">
-							 <i class="wi wi-storm-warning"></i>
-						 </span> 
-						 </a>
-					 </li>
-						
+						 
 						 <li class="active">
 						 <a href="#humidite" data-toggle="tab" title="Humidité">
 						  <span class="round-tabs one">
@@ -98,12 +92,13 @@
 						 </a>
 					 </li>
 					
+					<button id="button1"><i class="wi wi-small-craft-advisory" id="glaph"></i></button>
 					 
 	
 						 
 						 </ul></div>
-	
-						 <div class="tab-content">
+						<div class="tab-content">
+
 						  <div class="tab-pane fade in active" id="humidite">
 	
 						  </div>
@@ -111,13 +106,12 @@
 						
 							  
 						  </div>
-						  
-						  <div class="tab-pane fade" id="verifHumidite">
-						
-							  
-						  </div>
+							
 						
 						  <div class="clearfix"></div>
+						</div>
+						<div id="verifHumidite">
+	
 						</div>
 	
 			</div>

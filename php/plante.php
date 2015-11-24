@@ -75,8 +75,22 @@ class plante{
 		
 		$res = $dataBase->query("SELECT DISTINCT nom, nomArduino FROM plante WHERE (date >  DATE_SUB( NOW() , INTERVAL 1 MINUTE ) And valHum< 200 )");
 										       			  
-		return $res;
+		return $res;	
 		
+	}
+	
+	public static function modifImage($image,$nom,$nomArduino){
+		
+		$dataBase = new dataBase('iot');
+		
+		$res = $dataBase->prepare("UPDATE plante SET image=:image WHERE (nom=:nom AND nomArduino=:nomArduino)",
+		array(
+			  'image' => $image,
+			  'nom' => $nom,
+			  'nomArduino' => $nomArduino
+			  ));
+										       			  
+		return $res;
 		
 	}
 	

@@ -1,17 +1,27 @@
 @import url(icon.css);
-/* written by riliwan balogun http://www.facebook.com/riliwan.rabo*/
-/*.tab-content > .tab-pane,
-.pill-content > .pill-pane {
-    display: block;    
-    height: 0;          
-    overflow-y: hidden; 
+#glaph{
+    font-size: 40px;
+    text-align: center;
+    color: crimson;
 }
-.tab-content > .active,
-.pill-content > .active {
-    height: auto;       
-} 
-*/
 
+#button1:focus{
+    border-color:gainsboro;
+}
+#button1{
+    margin-top:3%;
+    margin-left:20%;
+    background-color:white;
+    border: solid;
+    border-color: crimson;
+    border-width: 2px;
+    border-radius:100px;
+    width:70px;
+    height:70px;
+    z-index: 10;
+    position: absolute;
+    
+}
 .glyphicon{
     
     margin-top: 22px;
@@ -48,7 +58,7 @@ p.narrow{
     height: 2px;
     background: #ddd;
     position: absolute;
-    width: 40%;
+    width: 19%;
     margin: 0 auto;
     margin-left: 55px;
     left: 0;
@@ -188,7 +198,7 @@ li.active:after {
 .tab-pane{
    position: relative;
    padding-top: 10px;
-   display: block !important;
+   display: block;
 }
 .tab-content .head{
     font-family: 'Roboto Condensed', sans-serif;
@@ -241,4 +251,15 @@ left: 35%;
 .btn-outline-rounded {
     padding:12px 20px;
     }
+    
+#button1{
+    margin-left:10% !important;
+    height:50px !important;
+    width:50px !important;
+    margin-top: 4% !important;
+    }
+#glaph{
+    font-size:16px;
+    
+    }    
 }
